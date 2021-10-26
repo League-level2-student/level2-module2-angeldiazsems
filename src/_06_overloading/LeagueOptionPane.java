@@ -20,7 +20,8 @@ public class LeagueOptionPane {
 	public static void showMessageDialog(String message) {
 		// 1. Open example.png and make a GUI that looks like that
 		//    The message parameter is what we want to show on our pop-up
-		
+		JFrame frame = new JFrame();
+		JPanel panel = new JPanel();
 		
 		// 2. Uncomment the line of code below. It sets the location of our frame to the center of the screen
 		//frame.setLocationRelativeTo(null);
