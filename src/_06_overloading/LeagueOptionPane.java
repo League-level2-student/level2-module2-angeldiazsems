@@ -7,6 +7,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /*
  * Overloading is when we have multiple methods with the SAME name, but DIFFERENT parameters.
@@ -21,7 +22,14 @@ public class LeagueOptionPane {
 		// 1. Open example.png and make a GUI that looks like that
 		//    The message parameter is what we want to show on our pop-up
 		JFrame frame = new JFrame();
+		frame.setVisible(true);
 		JPanel panel = new JPanel();
+		frame.add(panel);
+		JLabel label = new JLabel("the league is the bes");
+		panel.add(label);
+		System.out.println(loadImage("league.png"));
+		frame.setSize(250,116);
+		
 		
 		// 2. Uncomment the line of code below. It sets the location of our frame to the center of the screen
 		//frame.setLocationRelativeTo(null);
