@@ -2,7 +2,8 @@
 // ***** SEGMENT CLASS *****
 // This class will be used to represent each part of the moving snake.
 //*
-
+int x;
+int y;
 class Segment {
 
 //Add x and y member variables. They will hold the corner location of each segment of the snake.
@@ -51,7 +52,7 @@ void draw() {
 
 void drawFood() {
   //Draw the food
-  
+  ellipse(30,30,30,30);
 }
 
 void drawSnake() {

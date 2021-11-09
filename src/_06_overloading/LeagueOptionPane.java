@@ -1,11 +1,13 @@
 package _06_overloading;
 
+import java.awt.Color;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -25,22 +27,50 @@ public class LeagueOptionPane {
 		frame.setVisible(true);
 		JPanel panel = new JPanel();
 		frame.add(panel);
-		JLabel label = new JLabel("the league is the bes");
+		JLabel label = new JLabel(message);
 		panel.add(label);
-		System.out.println(loadImage("league.png"));
+		label.setIcon(loadImage("league.png"));
+		frame.setTitle("message");
 		frame.setSize(250,116);
 		
 		
 		// 2. Uncomment the line of code below. It sets the location of our frame to the center of the screen
-		//frame.setLocationRelativeTo(null);
+		frame.setLocationRelativeTo(null);
 	}
 	
 	// 3. Call this method in the Runner class
 	
-
+void showMessageDialogTWO(String message, String title) {
+	String input = message;
+	String input2 = title;
+	JFrame frame2 = new JFrame();
+	frame2.setVisible(true);
+	JPanel panel2 = new JPanel();
+	frame2.add(panel2);
+	JLabel label2 = new JLabel(message);
+	panel2.add(label2);
+	frame2.setTitle(title);
+	label2.setIcon(loadImage("league.png"));
+	frame2.setSize(250,116);
+	
+}
 	// 4. Create another showMessageDialog() method that lets us also choose the Message and Title 
 	//    2 String parameters (one for the message and one for the title)
-	
+	void showMessageDialogTHREE(String message, String title, String fileName) {
+		String input2 = message;
+		String input3 = title;
+		String input4 = fileName;
+		String input5 = fileName;
+		JFrame frame3 = new JFrame();
+		frame3.setVisible(true);
+		JPanel panel3 = new JPanel();
+		frame3.add(panel3);
+		JLabel label3 = new JLabel(message);
+		panel3.add(label3);
+		frame3.setTitle(title);
+		label3.setIcon(loadImage(fileName));
+		frame3.setSize(250,116);
+	}
 	// 5. Call this method in the Runner class
 	
 	
@@ -53,7 +83,12 @@ public class LeagueOptionPane {
 		//	1. Create another showMessageDialog() method that lets us choose the Message, Title, Image, and Background Color
 		//     3 String parameters (one for the message, one for the title, and one for the fileName)
 		//	   1 Color parameter for the backgroundColor
-		//			
+void showMessageDialogFOUR(String message, String title, String fileName, Color backgroundColor) {
+	
+	
+	
+	
+}
 		//	2. Change the return type of the 3rd showMessageDialog() method(the one right above) to JPanel
 		//	   Make sure to return your panel at the end of that method
 		//	
