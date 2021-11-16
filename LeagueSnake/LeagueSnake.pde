@@ -11,10 +11,7 @@ class Segment {
 
 // Add a constructor with parameters to initialize each variable.
 
-
-
 }
-
 
 //*
 // ***** GAME VARIABLES *****
@@ -31,7 +28,7 @@ class Segment {
 //*
 
 void setup() {
-
+size(300,300);
 }
 
 void dropFood() {
@@ -47,16 +44,21 @@ void dropFood() {
 //*
 
 void draw() {
-  
+  drawFood();
+  drawSnake();
 }
 
 void drawFood() {
   //Draw the food
-  ellipse(30,30,30,30);
+  fill(#F20707);
+  ellipse(25,25,25,25);
 }
 
 void drawSnake() {
   //Draw the head of the snake followed by its tail
+  fill(#25F207);
+  square(40,100,20);
+  rect(60,100,30,20);
 }
 
 
