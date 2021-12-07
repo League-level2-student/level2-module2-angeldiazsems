@@ -43,8 +43,8 @@ dropFood();
 
 void dropFood() {
   //Set the food in a new random location
- foodX = (int)random(50)*10;
- foodY = (int)random(50)*10;
+ foodX = (int)random(40)*10;
+ foodY = (int)random(40)*10;
 }
 
 
@@ -60,6 +60,7 @@ void draw() {
     move();
     drawSnake();
     eat();
+    text(""+foodEaten ,50,50);
 }
 
 void drawFood() {
@@ -72,6 +73,7 @@ void drawSnake() {
   //Draw the head of the snake followed by its tail
   fill(#25F207);
   rect(head.x,head.y,10,10);
+  manageTail();
 }
 
 
@@ -83,7 +85,10 @@ void drawSnake() {
 void drawTail() {
   //Draw each segment of the tail 
   fill(#25F207);
-  tail.add(new Segment(head.x,head.y));
+for(Segment s : tail){
+rect(s.x,s.y,10,10);
+}
+  
 }
 
 void manageTail() {
@@ -98,7 +103,16 @@ void manageTail() {
 
 void checkTailCollision() {
   //If the snake crosses its own tail, shrink the tail back to one segment
+ for(Segment tailSegment: tail){
   
+  if(head.x == tailSegment.x && head.y == tailSegment.y){
+ foodEaten = 1;
+ tail.clear();
+ tail.add(new Segment(head.x,head.y));
+break;
+}
+
+ }
 }
 
 
@@ -168,6 +182,7 @@ void eat() {
 if(head.x == foodX && head.y == foodY){
   foodEaten++;
   dropFood();
+  tail.add(new Segment(head.x,head.y));
 }
 
 
